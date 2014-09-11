@@ -1,7 +1,7 @@
 spark-jobserver provides a RESTful interface for submitting and managing [Apache Spark](http://spark-project.org) jobs, jars, and job contexts.
 This repo contains the complete Spark job server project, including unit tests and deploy scripts.
 
-We deploy our job server off of this repo at Ooyala and it is tested against CDH5 / Hadoop 2.2,  Spark 0.9.0 final, Scala 2.10.
+We deploy our job server off of this repo at Ooyala and it is tested against CDH5 / Hadoop 2.2,  Spark 1.0.2 final, Scala 2.10.
 
 ## Features
 
@@ -41,7 +41,7 @@ Then go ahead and start the job server using the instructions above.
 
 Let's upload the jar:
 
-    curl --data-binary @job-server-tests/target/job-server-tests-0.3.0.jar localhost:8090/jars/test
+    curl --data-binary @job-server-tests/target/job-server-tests-0.3.1.jar localhost:8090/jars/test
     OK⏎
 
 The above jar is uploaded as app `test`.  Next, let's start an ad-hoc word count job, meaning that the job
@@ -293,7 +293,15 @@ Contributions via Github Pull Request are welcome.  See the TODO for some ideas.
 - Be sure you are in the master project
 - Run `test` to ensure all tests pass
 - Now just run `publish` and package will be published to bintray
-  
+
+## Contact
+
+For user/dev questions, we are using google group for discussions:
+<https://groups.google.com/forum/#!forum/spark-jobserver>
+
+Please report bugs/problems to:
+<https://github.com/ooyala/spark-jobserver/issues>
+
 ## License
 Apache 2.0, see LICENSE.md
 
